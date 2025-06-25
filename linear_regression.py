@@ -73,8 +73,8 @@ ax.set_title('Predicting Time to First Job Based on Academic Performance')
 ax.legend()
 plt.show()
 
-# Example: Predict time to first job for new academic performance values
-new_academic_performance = np.arange(5).reshape((-1, 1))
-print(new_academic_performance)
+# Predict time to first job for new academic performance values
+new_academic_performance = np.random.uniform(3.2, 5.0, 5).reshape((-1, 1))
+print("Average Grades: \n", new_academic_performance)
 new_predicted_months = model.predict(new_academic_performance)
-print(new_predicted_months)
+print("Months to First Job: ", new_predicted_months)
